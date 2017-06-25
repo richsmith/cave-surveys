@@ -1,0 +1,7 @@
+encoding  utf-8
+
+source "ofd3up2ndpitch.th"
+
+export map -proj plan -layout local -o "ofd3up2ndpitch-plan.pdf"
+
+export map -proj extended -layout local -o "ofd3up2ndpitch-ee.pdf"
