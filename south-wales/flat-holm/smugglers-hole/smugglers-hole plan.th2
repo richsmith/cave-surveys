@@ -7,8 +7,6 @@ encoding  utf-8
 
 scrap scrap1 -scale [-150.28 -62.64 901.66 -62.64 0.0 0.0 26.719276 0.0 m]
 
-point 132.0 95.0 gradient -orientation 37.4
-
 area sand
   l18-734-358
 endarea
@@ -41,9 +39,7 @@ endarea
 area sand
 endarea
 
-point 227.0 172.0 gradient -orientation 66.4
-
-point 169.0 140.0 gradient -orientation 57.3
+point 169.0 140.0 gradient -orientation 57.3 -scale xs
 
 point 845.0 290.0 entrance -orientation 251.6
 
@@ -67,6 +63,7 @@ line wall
   64.0 31.0 134.0 21.0 147.0 36.0
   158.44 49.2 146.0 64.0 177.0 88.0
   208.0 112.0 186.6 128.25 207.0 124.0
+  smooth off
 endline
 
 point 295.0 94.0 air-draught -orientation 135.4 -scale xs

@@ -3,10 +3,14 @@ encoding  utf-8
 source "smugglers-hole.th"
 
 layout smugglers-hole-header
-  legend off
-  symbol-hide group centerline
+debug off
+   # map-header 0 0 off
+   symbol-hide group centerline
+   # grid bottom
+   # grid-size 10 10 10 m
 endlayout
 
 export map -layout smugglers-hole-header -proj plan  -o "smugglers-hole-plan.pdf"
+export map -proj extended -o "smugglers-hole-ee.pdf"
 
-export map -layout smugglers-hole-header -proj extended -o "smugglers-hole-ee.pdf"
+export map -layout smugglers-hole-header -proj plan  -o "smugglers-hole-plan.svg"
