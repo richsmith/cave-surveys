@@ -4,9 +4,9 @@ source "smugglers-hole.th"
 
 layout smugglers-hole-header
   legend off
-  #symbol-hide group centerline
+  symbol-hide group centerline
 endlayout
 
-export map -proj plan -layout local -o "smugglers-hole-plan.pdf"
+export map -layout smugglers-hole-header -proj plan  -o "smugglers-hole-plan.pdf"
 
-export map -proj extended -layout local -o "smugglers-hole-ee.pdf"
+export map -layout smugglers-hole-header -proj extended -o "smugglers-hole-ee.pdf"
