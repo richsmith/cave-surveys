@@ -12,5 +12,3 @@ endlayout
 
 export map -layout smugglers-hole-header -proj plan  -o "smugglers-hole-plan.pdf"
 export map -proj extended -o "smugglers-hole-ee.pdf"
-
-export map -layout smugglers-hole-header -proj plan  -o "smugglers-hole-plan.svg"
