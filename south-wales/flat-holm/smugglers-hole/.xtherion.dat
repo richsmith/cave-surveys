@@ -1,0 +1,12 @@
+set xth(ctrl,cp,datlist) {}
+xth_cp_data_tree_insert 1 {} 0   "" "" "length: 12.88m (surface 0.00m, duplicated 0.00m)\nvertical range: 3.75m (from 8@smugglers-hole at 3.39m to 2@smugglers-hole at -0.36m)\nnorth-south range: 3.78m (from 3@smugglers-hole at 1.23m to 8@smugglers-hole at -2.55m)\neast-west range: 9.39m (from 1@smugglers-hole at 0.00m to 8@smugglers-hole at -9.39m)\nnumber of shots: 75\nnumber of stations: 76"
+xth_cp_data_tree_insert 19 1 1 smugglers-hole smugglers-hole "Smugglers' Hole" "Smugglers' Hole" "length: 12.88m (surface 0.00m, duplicated 0.00m)\nvertical range: 3.75m (from 8@smugglers-hole at 3.39m to 2@smugglers-hole at -0.36m)\nnorth-south range: 3.78m (from 3@smugglers-hole at 1.23m to 8@smugglers-hole at -2.55m)\neast-west range: 9.39m (from 1@smugglers-hole at 0.00m to 8@smugglers-hole at -9.39m)\nnumber of shots: 75\nnumber of stations: 76"
+xth_cp_data_tree_create
+set xth(ctrl,cp,maplist) {}
+xth_cp_map_tree_insert projection 0 p1 {} 0 plan {} {} {}
+xth_cp_map_tree_insert projection 0 p2 {} 0 extended {} {} {}
+xth_cp_map_tree_create
+xth_cp_comp_stat 13 1
+set xth(th_exit_state) 1
+set xth(th_exit_number) 1535373481
+
