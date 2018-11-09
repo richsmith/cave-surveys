@@ -1,0 +1,7 @@
+encoding  utf-8
+
+source "blaengwynlais.th"
+
+export map -proj plan -layout local -o "blaengwynlais-plan.pdf"
+
+export map -proj extended -layout local -o "blaengwynlais-ee.pdf"

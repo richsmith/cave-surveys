@@ -10,5 +10,5 @@ debug off
    # grid-size 10 10 10 m
 endlayout
 
-export map -layout smugglers-hole-header -proj plan  -o "smugglers-hole-plan.pdf"
+# export map -layout smugglers-hole-header -proj plan  -o "smugglers-hole-plan.pdf"
 export map -proj extended -o "smugglers-hole-ee.pdf"
