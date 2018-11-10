@@ -1,11 +1,15 @@
 encoding  utf-8
-##XTHERION## xth_me_area_adjust -132.0 -165.2896656014972 1146.0 598.0
-##XTHERION## xth_me_area_zoom_to 100
+##XTHERION## xth_me_area_adjust -249.05263157894737 -165.2896656014972 1156.9473684210527 604.3157894736842
+##XTHERION## xth_me_area_zoom_to 38
 ##XTHERION## xth_me_image_insert {609.8624704184492 1 1.0} {133.49191986029896 5} {smugglers-hole ee.xvi} 0 {}
 
 
 
 scrap scrapee1 -projection extended -scale [-150.28 -62.64 901.66 -62.64 0.0 0.0 26.719276 0.0 m]
+
+point -107.8947368421052 192.10526315789483 label -text "Elevation" -scale l
+
+point 1015.7894736842105 242.10526315789477 air-draught -orientation 91.2
 
 point 7.0 85.0 entrance -orientation 85.5
 
@@ -26,8 +30,8 @@ line wall -reverse on
 endline
 
 line wall -reverse on
-  66.0 139.0
-  66.0 139.0 92.0 143.0 107.0 168.0
+  69.0 140.0
+  69.0 140.0 92.0 143.0 107.0 168.0
   122.0 193.0 108.0 217.0 119.0 233.0
   130.0 249.0 153.0 287.0 222.0 270.0
   291.0 253.0 288.0 248.0 297.0 241.0

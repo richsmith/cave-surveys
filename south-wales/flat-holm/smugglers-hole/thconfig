@@ -10,5 +10,23 @@ debug off
    # grid-size 10 10 10 m
 endlayout
 
-# export map -layout smugglers-hole-header -proj plan  -o "smugglers-hole-plan.pdf"
-export map -proj extended -o "smugglers-hole-ee.pdf"
+
+
+layout basic
+symbol-hide group centerline
+map-header 0 0 off
+# debug all
+legend off
+endlayout
+
+export map -layout basic -proj plan -o "smugglers-hole-plan.pdf"
+export map -layout basic -proj extended -o "smugglers-hole-ee.pdf"
+
+layout combined_layout
+  symbol-hide group centerline
+  # map-image  0 0 s   "smugglers-hole-plan.pdf"
+  map-image -100 200 center "smugglers-hole-ee.pdf"
+endlayout
+
+select smugglers-map-plan@smugglers-hole
+export map  -o combined.pdf  -layout combined_layout
