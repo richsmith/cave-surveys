@@ -1,0 +1,128 @@
+layout pretty
+  doc-author "Rich Smith"
+  symbol-set "BCRA"
+
+  symbol-hide group centerline
+
+  # grid bottom
+  # grid-size 10 10 10 m
+
+  symbol-colour line wall [35 35 35]
+  symbol-colour area clay [70 10 10]
+
+  symbol-colour point water-flow [0 0 100]
+  code metapost
+    # let p_gradient = p_entrance_UIS;
+    # let a_clay = a_clay_AUT withcolor (0, 0, 1);
+
+    # def a_clay (expr P) =
+    #   T:=identity;
+    #   thdraw P withcolor (1.0, 0.0, 0.0);
+    # enddef
+    # ;
+
+    beginpattern(pattern_sexy_mud);
+        pickup PenD;
+        p:= origin -- (0.08u, 0.0u);
+        for i = 0.0u step 0.4u until 2.4u:
+            for j = 0.0u step 0.4u until 2.4u:
+                draw p shifted ((i - uniformdeviate(0.25u)),
+                                (j - uniformdeviate(0.25u)));
+            endfor;
+        endfor;
+        patternstep(2.8u, 2.8u);
+    endpattern;
+
+
+    beginpattern(pattern_regular_dashes);
+        pickup PenC;
+        p:= origin -- (0.08u, 0.0u);
+        for i=0.0u step 0.4u until 2.4u:
+            for j=0.0u step 0.4u until 2.4u:
+              draw p shifted ((i, j));
+            endfor;
+        endfor;
+        if BaseScale<=2.5:
+          my_step:=2.4u;
+        else:
+          my_step:=2.6u;
+        fi;
+        patternstep(my_step, my_step);
+    endpattern;
+
+    beginpattern(pattern_sexy_scribble);
+        pickup PenC;
+        p:= origin -- (0.5u,0.5u);
+        for i=0.0u step 0.2u until 2.4u:
+            for j=0.0u step 0.2u until 2.4u:
+              draw p rotated uniformdeviate(360)
+               shifted ((i,j) randomized 0.09u);
+            endfor;
+        endfor;
+        if BaseScale<=2.5:
+          my_step:=2.4u;
+        else:
+          my_step:=2.6u;
+        fi;
+        patternstep(my_step,my_step);
+    endpattern;
+
+
+    beginpattern(pattern_sexy_hatched);
+        pickup PenC;
+        p:= origin -- (0.5u,0.5u);
+        for i=0.0u step 0.2u until 2.4u:
+            for j=0.0u step 0.2u until 2.4u:
+              draw p
+               shifted ((i,j) randomized 1u);
+            endfor;
+        endfor;
+        if BaseScale<=2.5:
+          my_step:=2.4u;
+        else:
+          my_step:=2.6u;
+        fi;
+        patternstep(my_step,my_step);
+    endpattern;
+
+    def a_clay (expr Path) =
+      T:=identity;
+      thfill Path withpattern pattern_sexy_mud;
+    enddef;
+
+    let l_floorstep = l_border_visible_SKBB;
+  # bodge to make floor-steps look sensible
+
+
+  # define dashed line for surface surveys
+    def l_survey_surface (expr P) =
+      T:=identity;
+      pickup PenD scaled 0.2;
+      thdraw P withcolor (0.8,0.8,0.8);
+    enddef;
+    def l_survey_cave (expr P) =
+      T:=identity;
+      pickup PenD scaled 0.2;
+      thdraw P;
+    enddef;
+
+  # define water to be light blue
+    def a_water (expr p) =
+      T:=identity;
+  #nice light blue - but nearly same as level colour - change back when we have control of that
+  #    thfill p withcolor (0.48, 0.84, 1.0);
+      thfill p withcolor (0.0, 0.0, 1.0);
+
+      enddef;
+
+  # define sump to be dark blue
+    def a_sump (expr p) =
+      T:=identity;
+      thfill p withcolor (0.05, 0.0, 0.7);
+    enddef;
+
+
+  endcode
+
+
+endlayout

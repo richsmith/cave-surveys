@@ -14,7 +14,11 @@ endmap
   
   centreline
     data normal from to length compass clino
-    
+    team "Rich Smith"
+    explo-team "Gareth Davies"
+    explo-team "Mat Brown"
+    explo-team "Pete Martindale"
+
     1  -  0.90  333.27  -3.40  
     1  -  1.28  309.47  -6.84  
     1  -  0.95  340.82  -8.40  

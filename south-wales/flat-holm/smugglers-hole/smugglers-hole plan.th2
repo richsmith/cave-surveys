@@ -9,11 +9,7 @@ scrap scrap1 -scale [-150.28 -62.64 901.66 -62.64 0.0 0.0 26.719276 0.0 m]
 
 point 825.0 402.0 label -text Plan -scale l
 
-area sand
-  l18-734-358
-endarea
-
-area sand
+area clay
   l18-734-358
 endarea
 
@@ -34,12 +30,6 @@ line border -id l18-734-358 -close on
   857.0 194.0
   857.0 194.0 909.0 241.0 870.0 297.0
 endline
-
-area sand
-endarea
-
-area sand
-endarea
 
 point 169.0 140.0 gradient -orientation 57.3 -scale xs
 
